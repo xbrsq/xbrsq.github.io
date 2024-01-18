@@ -250,7 +250,7 @@ function init() {
         "+cyl;3,0,0;0,0,90;2;0.2;magenta;0.9\n" +
         ":BGSET red\n:ZOOM 10\n"+
         ":STACK.PUSH 1\n"+ // current yaw
-        ":STACK.PUSH 1\n"+ // current dyaw
+        ":STACK.PUSH 3\n"+ // current dyaw
         ":STACK.PUSH 0\n"+ // temp output for condition
         "~:STACK.OP /0 + /1 0\n"+
         "~:STACK.OP /0 >= 180 2\n"+
