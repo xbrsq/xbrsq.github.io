@@ -1,0 +1,38 @@
+var ROM = new Uint8Array([0,
+    OPCODES.LOADX,
+    ...int32ToBytes(4),
+    OPCODES.LOADY,
+    ...int32ToBytes(2),
+    OPCODES.COPY,
+    REGISTERS.A,
+    REGISTERS.X,
+    OPCODES.LOADB,
+    ...int32ToBytes(1),
+    OPCODES.ADD,
+    OPCODES.COPY,
+    REGISTERS.X,
+    REGISTERS.C,
+    
+    OPCODES.COPY,
+    REGISTERS.A,
+    REGISTERS.Y,
+    OPCODES.ADD,
+    OPCODES.COPY,
+    REGISTERS.Y,
+    REGISTERS.C,
+    
+    OPCODES.MARKER,
+
+    OPCODES.COPY,
+    REGISTERS.A,
+    REGISTERS.X,
+    OPCODES.COPY,
+    REGISTERS.B,
+    REGISTERS.Y,
+    OPCODES.ADD,
+    OPCODES.OUT,
+    REGISTERS.C,
+    
+    OPCODES.GOTO,
+    ...int32ToBytes(11)
+]);
